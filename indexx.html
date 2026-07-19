@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cure Pathology — Muzaffarpur</title>
+<meta name="description" content="Cure Pathology — Muzaffarpur's trusted diagnostic laboratory. 2000+ tests, same-day reports, home collection. Call +91 93084 60409.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --linen:#F5F0E8;
+  --cream:#FAF7F2;
+  --cream2:#F0E8DC;
+  --burg:#7B1F3A;
+  --burg2:#A0384F;
+  --burg3:#5A1228;
+  --amber:#C8864A;
+  --amber2:#E8A86A;
+  --espresso:#2C1810;
+  --muted:#8B7355;
+  --border:rgba(123,31,58,.12);
+  --white:#FFFFFF;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--cream);
+  color:var(--espresso);
+  font-family:'Jost',sans-serif;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+::selection{background:var(--burg);color:var(--cream)}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--cream2)}
+::-webkit-scrollbar-thumb{background:var(--burg)}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.25rem 1.5rem;
+  transition:all .4s ease;
+}
+nav.scrolled{
+  background:rgba(250,247,242,.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  padding:1rem 1.5rem;
+  box-shadow:0 2px 20px rgba(123,31,58,.06);
+}
+.logo-mark{
+  display:flex;align-items:center;gap:.7rem;
+}
+.logo-circle{
+  width:34px;height:34px;border-radius:50%;
+  border:1.5px solid var(--burg);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.logo-circle::before{
+  content:'';position:absolute;
+  width:18px;height:18px;border-radius:50%;
+  background:rgba(123,31,58,.15);
+  animation:logo-pulse 3s ease-in-out infinite;
+}
+@keyframes logo-pulse{
+  0%,100%{transform:scale(.8);opacity:.8}
+  50%{transform:scale(1.1);opacity:.4}
+}
+.logo-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--burg);position:relative;z-index:1;
+}
+.logo-text{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;font-weight:500;color:var(--burg3);
+  letter-spacing:.02em;
+}
+.logo-text span{color:var(--amber);font-style:italic}
+.nav-cta{
+  font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--cream);background:var(--burg);
+  padding:.6rem 1.35rem;
+  border:1.5px solid var(--burg);
+  border-radius:100px;
+  transition:all .3s;
+}
+.nav-cta:active{background:var(--burg3);transform:scale(.97)}
+
+/* ── HERO ── */
+.hero{
+  min-height:100svh;
+  padding:7rem 1.5rem 4rem;
+  position:relative;
+  display:flex;flex-direction:column;
+  justify-content:center;
+  overflow:hidden;
+}
+/* Warm linen gradient bg */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 85% 20%, rgba(200,134,74,.18) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 15% 85%, rgba(123,31,58,.1) 0%, transparent 50%),
+    var(--cream);
+  z-index:0;
+}
+
+/* ── MICROSCOPE SLIDE ILLUSTRATION ── */
+.slide-wrap{
+  position:absolute;
+  top:50%;right:-60px;
+  transform:translateY(-50%);
+  width:320px;height:320px;
+  opacity:.22;
+  pointer-events:none;
+  z-index:1;
+}
+.slide-ring{
+  position:absolute;top:50%;left:50%;
+  border-radius:50%;border:1px solid var(--burg);
+  transform:translate(-50%,-50%);
+}
+.slide-ring.r1{width:280px;height:280px;animation:ring-rotate 35s linear infinite;border-color:rgba(123,31,58,.6)}
+.slide-ring.r2{width:200px;height:200px;animation:ring-rotate 25s linear infinite reverse;border-color:rgba(200,134,74,.6)}
+.slide-ring.r3{width:120px;height:120px;animation:ring-rotate 18s linear infinite;border-color:rgba(123,31,58,.8)}
+@keyframes ring-rotate{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+/* Organic cell shapes inside */
+.slide-cell{
+  position:absolute;top:50%;left:50%;
+  border-radius:50%;
+  border:1.5px solid;
+  transform-origin:center;
+  animation:cell-morph ease-in-out infinite alternate;
+}
+.sc1{width:90px;height:75px;border-color:rgba(123,31,58,.7);transform:translate(-50%,-50%) translate(-30px,-20px);animation-duration:6s;animation-delay:0s}
+.sc2{width:55px;height:65px;border-color:rgba(200,134,74,.8);transform:translate(-50%,-50%) translate(35px,15px);animation-duration:8s;animation-delay:-2s}
+.sc3{width:40px;height:40px;border-color:rgba(123,31,58,.5);transform:translate(-50%,-50%) translate(-10px,40px);animation-duration:7s;animation-delay:-4s}
+.sc4{width:70px;height:55px;border-color:rgba(200,134,74,.5);transform:translate(-50%,-50%) translate(20px,-45px);animation-duration:9s;animation-delay:-3s}
+.sc5{width:25px;height:25px;border-color:rgba(123,31,58,.9);transform:translate(-50%,-50%) translate(-50px,5px);animation-duration:5s;animation-delay:-1s;background:rgba(123,31,58,.08)}
+
+@keyframes cell-morph{
+  from{border-radius:60% 40% 55% 45% / 45% 55% 45% 55%}
+  to{border-radius:40% 60% 45% 55% / 55% 45% 55% 45%}
+}
+
+/* Slide crosshair */
+.slide-cross{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20px;height:20px}
+.slide-cross::before,.slide-cross::after{
+  content:'';position:absolute;background:rgba(123,31,58,.6);
+}
+.slide-cross::before{width:1px;height:20px;left:50%;transform:translateX(-50%)}
+.slide-cross::after{width:20px;height:1px;top:50%;transform:translateY(-50%)}
+
+/* Dot scatter */
+.micro-dot{
+  position:absolute;
+  border-radius:50%;
+  background:var(--burg);
+  animation:dot-drift ease-in-out infinite alternate;
+}
+@keyframes dot-drift{
+  from{transform:translate(0,0) scale(1)}
+  to{transform:translate(4px,-6px) scale(.85)}
+}
+
+.hero-content{position:relative;z-index:2;max-width:500px}
+
+/* Word reveal — each word wraps in a span that clips */
+.word-reveal-wrap{overflow:hidden;display:inline-block}
+.word-reveal{
+  display:inline-block;
+  opacity:0;transform:translateY(60px) rotateX(15deg);
+  transition:opacity .7s ease,transform .7s ease;
+  transform-origin:bottom;
+}
+.word-reveal.up{opacity:1;transform:translateY(0) rotateX(0)}
+
+.hero-kicker{
+  display:flex;align-items:center;gap:.6rem;
+  margin-bottom:1.5rem;
+}
+.hero-kicker-pill{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(123,31,58,.1);
+  border:1px solid rgba(123,31,58,.2);
+  padding:.35rem .85rem;border-radius:100px;
+}
+.kicker-dot{width:6px;height:6px;background:var(--burg);border-radius:50%;animation:breathe 2s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+.kicker-text{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--burg);font-weight:600}
+
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.6rem,8vw,4.2rem);
+  font-weight:400;line-height:1.1;
+  color:var(--burg3);letter-spacing:-.01em;
+  margin-bottom:1.25rem;
+}
+.hero-h1 em{font-style:italic;color:var(--burg);font-weight:500}
+.hero-h1 .line{display:block}
+
+.hero-sub{
+  font-size:.95rem;line-height:1.85;
+  color:var(--muted);max-width:380px;
+  font-weight:300;margin-bottom:2.25rem;
+}
+
+/* Swipe metric strip */
+.hero-metrics{
+  display:flex;gap:0;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.6);
+  backdrop-filter:blur(10px);
+  overflow-x:auto;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+  margin-bottom:2rem;
+}
+.hero-metrics::-webkit-scrollbar{display:none}
+.hero-metric{
+  padding:1rem 1.25rem;
+  border-right:1px solid var(--border);
+  flex:0 0 auto;text-align:center;min-width:100px;
+}
+.hero-metric:last-child{border-right:none}
+.hm-num{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;font-weight:500;color:var(--burg);line-height:1;
+}
+.hm-lbl{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn-burg{
+  flex:1;min-width:140px;
+  background:var(--burg);color:var(--cream);
+  padding:.9rem 1.5rem;border-radius:100px;
+  font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  transition:all .3s;border:1.5px solid var(--burg);
+  -webkit-tap-highlight-color:transparent;
+}
+.btn-burg:active{background:var(--burg3);transform:scale(.98)}
+.btn-outline-burg{
+  flex:1;min-width:140px;
+  background:transparent;color:var(--burg);
+  padding:.9rem 1.5rem;border-radius:100px;
+  font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  border:1.5px solid rgba(123,31,58,.35);
+  transition:all .3s;-webkit-tap-highlight-color:transparent;
+}
+.btn-outline-burg:active{background:rgba(123,31,58,.08);transform:scale(.98)}
+
+/* ── SCROLL-UP SECTIONS ── */
+.sec{padding:5rem 1.5rem}
+.sec-inner{max-width:600px;margin:0 auto}
+
+.sec-kicker{
+  display:flex;align-items:center;gap:.6rem;margin-bottom:.75rem;
+  overflow:hidden;
+}
+.sk-line{width:20px;height:1px;background:var(--amber);flex-shrink:0}
+.sk-text{
+  font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber);font-weight:600;
+}
+.sec-h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.75rem,5vw,2.5rem);
+  font-weight:400;color:var(--burg3);
+  line-height:1.2;letter-spacing:-.005em;
+}
+.sec-h2 em{font-style:italic;color:var(--burg)}
+.sec-p{
+  font-size:.9rem;line-height:1.85;
+  color:var(--muted);font-weight:300;
+  margin-top:.85rem;
+}
+
+/* ── MARQUEE ── */
+.mq{
+  background:var(--burg);
+  padding:.85rem 0;overflow:hidden;
+}
+.mq-track{
+  display:flex;white-space:nowrap;
+  animation:mq 24s linear infinite;gap:0;
+}
+.mq-item{
+  display:inline-flex;align-items:center;gap:1.25rem;
+  padding:0 1.75rem;
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-size:.95rem;
+  color:rgba(250,247,242,.8);flex-shrink:0;
+}
+.mq-dot{width:3px;height:3px;border-radius:50%;background:var(--amber2);flex-shrink:0}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── SERVICES ── */
+.services-bg{background:var(--linen)}
+.services-grid{display:flex;flex-direction:column;gap:1px;background:var(--border);margin-top:3rem}
+.svc{
+  background:var(--cream);
+  padding:1.75rem 1.5rem;
+  display:flex;gap:1.25rem;align-items:flex-start;
+  position:relative;overflow:hidden;
+  transition:background .3s;
+  -webkit-tap-highlight-color:transparent;
+}
+.svc::after{
+  content:'';position:absolute;
+  bottom:0;left:1.5rem;right:1.5rem;height:1px;
+  background:linear-gradient(90deg,var(--burg),transparent);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s ease;
+}
+.svc:active,.svc:focus-within{background:rgba(123,31,58,.03)}
+.svc:hover::after{transform:scaleX(1)}
+.svc-num{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;color:var(--amber);
+  font-weight:500;flex-shrink:0;min-width:28px;
+  margin-top:2px;
+}
+.svc-content{}
+.svc-name{
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;font-weight:500;color:var(--burg3);
+  margin-bottom:.35rem;
+}
+.svc-desc{font-size:.83rem;color:var(--muted);line-height:1.7;font-weight:300}
+.svc-tag{
+  display:inline-block;margin-top:.6rem;
+  font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--burg);border:1px solid rgba(123,31,58,.25);
+  padding:.2rem .6rem;border-radius:100px;font-weight:600;
+}
+
+/* ── ABOUT / TRUST ── */
+.about-bg{background:var(--cream)}
+.about-visual{
+  margin:2.5rem 0;
+  background:linear-gradient(145deg,var(--cream2),var(--linen));
+  border:1px solid var(--border);
+  border-radius:2px;
+  padding:2.5rem;
+  position:relative;overflow:hidden;
+}
+.about-visual::before{
+  content:'';position:absolute;
+  top:-40px;right:-40px;
+  width:160px;height:160px;border-radius:50%;
+  background:radial-gradient(circle,rgba(123,31,58,.1),transparent 70%);
+}
+/* Animated lab illustration */
+.lab-anim{
+  display:flex;justify-content:center;
+  margin-bottom:2rem;
+  position:relative;height:120px;align-items:center;
+}
+.tube{
+  width:22px;border-radius:0 0 12px 12px;
+  position:relative;margin:0 6px;
+  border:1.5px solid var(--burg);
+  border-top:none;
+  overflow:hidden;
+  display:flex;align-items:flex-end;
+  animation:tube-fill ease-in-out infinite alternate;
+}
+.tube-liquid{
+  width:100%;
+  background:var(--burg);
+  border-radius:0 0 10px 10px;
+  position:absolute;bottom:0;left:0;right:0;
+  transition:height 1s ease;
+}
+.t1{height:70px;animation-duration:4s;animation-delay:0s}
+.t1 .tube-liquid{height:45%;background:linear-gradient(to top,var(--burg),var(--burg2));opacity:.7}
+.t2{height:90px;animation-duration:5s;animation-delay:-.8s}
+.t2 .tube-liquid{height:60%;background:linear-gradient(to top,var(--amber),var(--amber2));opacity:.8}
+.t3{height:60px;animation-duration:3.5s;animation-delay:-1.5s}
+.t3 .tube-liquid{height:35%;background:linear-gradient(to top,var(--burg3),var(--burg));opacity:.6}
+.t4{height:80px;animation-duration:4.5s;animation-delay:-.4s}
+.t4 .tube-liquid{height:55%;background:linear-gradient(to top,var(--burg),var(--burg2));opacity:.7}
+@keyframes tube-fill{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-4px)}
+  100%{transform:translateY(0)}
+}
+
+/* Microscope circle animation */
+.micro-circle{
+  position:absolute;right:2rem;top:50%;transform:translateY(-50%);
+  width:80px;height:80px;border-radius:50%;
+  border:2px solid rgba(123,31,58,.2);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.micro-circle::before{
+  content:'';position:absolute;
+  width:30px;height:22px;border-radius:50%;
+  border:1.5px solid rgba(123,31,58,.6);
+  animation:cell-drift 5s ease-in-out infinite alternate;
+}
+.micro-circle::after{
+  content:'';position:absolute;
+  width:15px;height:20px;border-radius:50%;
+  border:1px solid rgba(200,134,74,.8);
+  animation:cell-drift2 6s ease-in-out infinite alternate;
+}
+@keyframes cell-drift{
+  from{transform:translate(-8px,-5px)}to{transform:translate(8px,5px)}
+}
+@keyframes cell-drift2{
+  from{transform:translate(5px,8px)}to{transform:translate(-6px,-8px)}
+}
+
+.quote-wrap{
+  border-left:3px solid var(--burg);
+  padding:1rem 1.25rem;
+  background:rgba(123,31,58,.04);
+  margin:1.5rem 0;
+}
+.quote-text{
+  font-family:'Playfair Display',serif;
+  font-size:1.05rem;font-style:italic;font-weight:400;
+  color:var(--burg3);line-height:1.65;
+}
+.feat-list{display:flex;flex-direction:column;gap:.75rem;margin-top:1.75rem}
+.feat-item{
+  display:flex;gap:.85rem;align-items:flex-start;
+  padding:.85rem;
+  background:var(--linen);
+  border-left:2px solid transparent;
+  transition:border-color .3s;
+}
+.feat-item:hover{border-color:var(--burg)}
+.feat-check{
+  width:22px;height:22px;border-radius:50%;
+  background:rgba(123,31,58,.12);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;margin-top:1px;
+}
+.feat-check svg{width:11px;height:11px;stroke:var(--burg);fill:none;stroke-width:2.5}
+.feat-t{font-size:.88rem;font-weight:500;color:var(--burg3)}
+.feat-s{font-size:.78rem;color:var(--muted);margin-top:2px;font-weight:300;line-height:1.5}
+
+/* ── PROCESS ── */
+.process-bg{background:var(--burg3)}
+.process-bg .sec-kicker .sk-text{color:var(--amber2)}
+.process-bg .sk-line{background:var(--amber2)}
+.process-bg .sec-h2{color:var(--cream)}
+.process-bg .sec-h2 em{color:var(--amber2)}
+.process-bg .sec-p{color:rgba(240,232,220,.6)}
+.steps{display:flex;flex-direction:column;gap:0;margin-top:2.5rem}
+.step{
+  display:flex;gap:1.25rem;
+  padding:1.5rem 0;
+  border-bottom:1px solid rgba(245,240,232,.08);
+  position:relative;
+}
+.step:last-child{border-bottom:none}
+.step-num{
+  font-family:'Playfair Display',serif;
+  font-size:2rem;font-weight:400;
+  color:rgba(200,134,74,.35);
+  flex-shrink:0;min-width:2rem;line-height:1;
+}
+.step-content{}
+.step-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;color:var(--cream);font-weight:500;
+  margin-bottom:.4rem;
+}
+.step-desc{font-size:.82rem;color:rgba(240,232,220,.55);line-height:1.7;font-weight:300}
+.step-tag{
+  display:inline-block;margin-top:.5rem;
+  font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber2);border:1px solid rgba(200,134,74,.3);
+  padding:.18rem .55rem;border-radius:100px;font-weight:600;
+}
+
+/* ── TESTIMONIALS ── */
+.test-bg{background:var(--linen)}
+.test-cards{display:flex;flex-direction:column;gap:1.25rem;margin-top:2.5rem}
+.test-card{
+  background:var(--cream);
+  border:1px solid var(--border);
+  padding:1.75rem 1.5rem;
+  position:relative;
+}
+.test-card::before{
+  content:'\201C';
+  font-family:'Playfair Display',serif;font-size:4rem;
+  color:rgba(123,31,58,.08);position:absolute;
+  top:.5rem;left:1rem;line-height:1;
+}
+.test-stars{color:var(--amber);font-size:.7rem;letter-spacing:2px;margin-bottom:.85rem}
+.test-text{
+  font-family:'Playfair Display',serif;
+  font-size:.95rem;font-style:italic;font-weight:300;
+  color:var(--espresso);line-height:1.8;
+  margin-bottom:1.1rem;
+}
+.test-name{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--burg)}
+.test-loc{font-size:.68rem;color:var(--muted);margin-top:2px}
+
+/* ── CTA STRIP ── */
+.cta-strip{
+  background:linear-gradient(135deg,var(--burg3) 0%,var(--burg) 100%);
+  padding:3.5rem 1.5rem;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-strip::before{
+  content:'';position:absolute;
+  width:250px;height:250px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,134,74,.2),transparent 70%);
+  top:-80px;right:-60px;
+}
+.cta-strip .sec-inner{position:relative;z-index:1}
+.cta-h{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.65rem,5vw,2.4rem);
+  font-weight:400;color:var(--cream);
+  line-height:1.2;margin-bottom:.75rem;
+}
+.cta-h em{font-style:italic;color:var(--amber2)}
+.cta-p{font-size:.88rem;color:rgba(245,240,232,.7);margin-bottom:2rem;line-height:1.75;font-weight:300}
+.cta-actions{display:flex;gap:.75rem;flex-direction:column;max-width:300px;margin:0 auto}
+.btn-cream{
+  background:var(--cream);color:var(--burg3);
+  padding:.9rem 1.5rem;border-radius:100px;
+  font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  border:1.5px solid var(--cream);transition:all .3s;
+}
+.btn-cream:active{background:var(--cream2);transform:scale(.98)}
+.btn-ghost-cream{
+  background:transparent;color:var(--cream);
+  padding:.9rem 1.5rem;border-radius:100px;
+  font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  border:1.5px solid rgba(245,240,232,.35);transition:all .3s;
+}
+.btn-ghost-cream:active{background:rgba(245,240,232,.1);transform:scale(.98)}
+
+/* ── CONTACT ── */
+.contact-bg{background:var(--cream)}
+.contact-cards{display:flex;flex-direction:column;gap:1px;background:var(--border);margin-top:2.5rem}
+.con-row{
+  background:var(--cream);
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1.35rem 1.25rem;
+}
+.con-ico{
+  width:36px;height:36px;flex-shrink:0;
+  border-radius:50%;
+  background:rgba(123,31,58,.1);
+  display:flex;align-items:center;justify-content:center;
+}
+.con-ico svg{width:15px;height:15px;stroke:var(--burg);fill:none;stroke-width:2}
+.con-lbl{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);font-weight:600}
+.con-val{font-size:.9rem;color:var(--espresso);font-weight:400;margin-top:2px;line-height:1.5}
+.con-val a{color:var(--burg);font-weight:500}
+.form-card{
+  background:var(--linen);
+  border:1px solid var(--border);
+  padding:2rem 1.5rem;
+  margin-top:2rem;
+}
+.form-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:1.2rem;font-weight:500;color:var(--burg3);margin-bottom:1.5rem;
+}
+.f-row{margin-bottom:1rem}
+.f-row label{
+  font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--burg);font-weight:600;display:block;margin-bottom:.4rem;
+}
+.f-row input,.f-row select,.f-row textarea{
+  width:100%;padding:.8rem 1rem;
+  background:var(--cream);border:1.5px solid var(--border);
+  color:var(--espresso);font-size:.88rem;
+  font-family:'Jost',sans-serif;outline:none;
+  border-radius:2px;
+  transition:border-color .3s;-webkit-appearance:none;
+}
+.f-row input::placeholder,.f-row textarea::placeholder{color:rgba(139,115,85,.5)}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{border-color:var(--burg)}
+.f-row textarea{resize:vertical;min-height:85px}
+.f-submit{
+  width:100%;background:var(--burg);color:var(--cream);
+  padding:.9rem;border:none;border-radius:100px;cursor:pointer;
+  font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  font-family:'Jost',sans-serif;transition:background .3s;
+}
+.f-submit:active{background:var(--burg3);transform:scale(.99)}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--burg3);
+  padding:2.5rem 1.5rem;
+  text-align:center;
+}
+.footer-name{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;color:var(--cream);margin-bottom:.3rem;
+}
+.footer-name span{color:var(--amber2);font-style:italic}
+.footer-sub{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,240,232,.4);margin-bottom:1.25rem}
+.footer-links{display:flex;justify-content:center;gap:1.75rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.footer-links a{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.4);transition:color .3s}
+.footer-links a:active{color:var(--amber2)}
+.footer-copy{font-size:.65rem;color:rgba(245,240,232,.2)}
+
+/* ── WHATSAPP ── */
+.wa{
+  position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;
+  width:50px;height:50px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 20px rgba(37,211,102,.35);
+  animation:wa-ring 3s ease-in-out infinite;
+}
+.wa svg{width:25px;height:25px;fill:white}
+@keyframes wa-ring{
+  0%,100%{box-shadow:0 6px 20px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.3)}
+  60%{box-shadow:0 6px 20px rgba(37,211,102,.35),0 0 0 12px rgba(37,211,102,0)}
+}
+
+/* ── SCROLL REVEAL ── */
+.sr{
+  opacity:0;transform:translateY(40px);
+  transition:opacity .75s ease,transform .75s ease;
+}
+.sr.in{opacity:1;transform:translateY(0)}
+
+/* staggered delays */
+.sr-d1{transition-delay:.1s}
+.sr-d2{transition-delay:.2s}
+.sr-d3{transition-delay:.3s}
+
+/* ── WORD-BY-WORD REVEAL ── */
+.word-up{
+  display:inline-block;
+  opacity:0;transform:translateY(30px);
+  transition:opacity .55s ease,transform .55s ease;
+}
+.word-up.in{opacity:1;transform:translateY(0)}
+
+
+
+/* ── HEALTH PACKAGES SECTION ── */
+.plans-bg{background:var(--linen)}
+.plans-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.25rem;
+  margin-top:2rem;
+}
+.plan-card{
+  border-radius:20px;
+  padding:2rem 1.5rem;
+  border:2px solid transparent;
+  position:relative;
+  overflow:hidden;
+  transition:transform .3s,box-shadow .3s;
+}
+.plan-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(123,31,58,.12)}
+.plan-card.supreme{
+  background:white;
+  border-color:rgba(123,31,58,.2);
+}
+.plan-card.ultima{
+  background:var(--burg3);
+  border-color:var(--burg);
+}
+.plan-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:.28rem .75rem;border-radius:100px;margin-bottom:1.1rem;
+}
+.supreme .plan-badge{background:rgba(123,31,58,.1);color:var(--burg)}
+.ultima .plan-badge{background:rgba(245,240,232,.15);color:var(--cream)}
+.plan-badge-dot{width:5px;height:5px;border-radius:50%}
+.supreme .plan-badge-dot{background:var(--burg)}
+.ultima .plan-badge-dot{background:var(--amber2, #E8A86A)}
+.plan-name{
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;font-weight:700;line-height:1.2;
+  margin-bottom:.4rem;
+}
+.supreme .plan-name{color:var(--burg3)}
+.ultima .plan-name{color:var(--cream)}
+.plan-tagline{
+  font-size:.75rem;font-weight:400;line-height:1.5;margin-bottom:1.25rem;
+}
+.supreme .plan-tagline{color:var(--muted)}
+.ultima .plan-tagline{color:rgba(245,240,232,.6)}
+.plan-divider{
+  height:1px;margin:1.1rem 0;
+}
+.supreme .plan-divider{background:rgba(123,31,58,.1)}
+.ultima .plan-divider{background:rgba(245,240,232,.15)}
+.plan-tests-label{
+  font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  margin-bottom:.75rem;
+}
+.supreme .plan-tests-label{color:var(--amber)}
+.ultima .plan-tests-label{color:rgba(200,134,74,.9)}
+.plan-tests{display:flex;flex-direction:column;gap:.5rem}
+.plan-test-item{
+  display:flex;align-items:center;gap:.55rem;
+  font-size:.78rem;font-weight:400;line-height:1.4;
+}
+.supreme .plan-test-item{color:var(--espresso)}
+.ultima .plan-test-item{color:rgba(245,240,232,.85)}
+.plan-check{
+  width:16px;height:16px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.supreme .plan-check{background:rgba(123,31,58,.1)}
+.supreme .plan-check svg{stroke:var(--burg)}
+.ultima .plan-check{background:rgba(245,240,232,.15)}
+.ultima .plan-check svg{stroke:rgba(245,240,232,.9)}
+.plan-check svg{width:9px;height:9px;fill:none;stroke-width:2.5}
+.plan-cta{
+  width:100%;margin-top:1.5rem;
+  padding:.85rem;border-radius:100px;border:none;
+  font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  font-family:'Jost',sans-serif;cursor:pointer;
+  transition:all .3s;-webkit-tap-highlight-color:transparent;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+}
+.supreme .plan-cta{background:var(--burg);color:var(--cream)}
+.supreme .plan-cta:active{background:var(--burg3);transform:scale(.98)}
+.ultima .plan-cta{background:var(--cream);color:var(--burg3)}
+.ultima .plan-cta:active{opacity:.9;transform:scale(.98)}
+.plan-assoc{
+  text-align:center;margin-top:1.75rem;
+  font-size:.72rem;color:var(--muted);
+}
+.plan-assoc strong{color:var(--burg);font-weight:600}
+/* Mobile: stack plans */
+@media(max-width:500px){
+  .plans-grid{grid-template-columns:1fr}
+}
+
+/* ── PHOTO GALLERY ── */
+.gallery-bg{background:var(--cream)}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:.75rem;
+  margin-top:2rem;
+}
+.gallery-item{
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  aspect-ratio:4/3;
+  background:var(--linen);
+  border:1px solid var(--border);
+}
+.gallery-item.wide{grid-column:span 2;aspect-ratio:16/7}
+.gallery-img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .5s ease;
+}
+.gallery-item:hover .gallery-img{transform:scale(1.04)}
+/* Placeholder while no image */
+.gallery-placeholder{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:.5rem;
+  color:rgba(123,31,58,.3);
+}
+.gallery-placeholder svg{width:32px;height:32px;stroke:rgba(123,31,58,.25);fill:none;stroke-width:1.5}
+.gallery-placeholder span{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.gallery-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:.6rem .85rem;
+  background:linear-gradient(to top,rgba(44,24,16,.75),transparent);
+  font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(250,247,242,.9);
+}
+
+/* ── GOOGLE MAP EMBED ── */
+.map-wrap{margin-top:1.75rem}
+.map-frame{
+  width:100%;
+  height:280px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 4px 20px rgba(123,31,58,.1);
+  position:relative;
+}
+.map-directions-btn{
+  display:flex;align-items:center;justify-content:center;
+  width:100%;
+  margin-top:.75rem;
+  background:var(--burg3);
+  color:var(--cream);
+  padding:1rem 1.5rem;
+  border-radius:12px;
+  font-size:.85rem;font-weight:600;
+  letter-spacing:.04em;
+  transition:background .3s,transform .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.map-directions-btn:active{background:var(--burg);transform:scale(.98)}
+
+/* ── TEST LIST INSIDE CARDS ── */
+.test-list{
+  display:flex;flex-wrap:wrap;gap:.4rem;
+  margin-top:.85rem;
+  max-height:0;overflow:hidden;
+  transition:max-height .5s cubic-bezier(.16,1,.3,1),opacity .4s ease;
+  opacity:0;
+}
+.test-list.open{max-height:500px;opacity:1}
+.test-pill{
+  font-size:.62rem;font-weight:500;
+  color:var(--burg);
+  background:rgba(123,31,58,.07);
+  border:1px solid rgba(123,31,58,.15);
+  padding:.22rem .65rem;border-radius:100px;
+  white-space:nowrap;
+}
+.svc-toggle{
+  display:inline-flex;align-items:center;gap:.35rem;
+  margin-top:.85rem;
+  font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--burg);cursor:pointer;
+  background:none;border:none;padding:0;
+  font-family:inherit;
+  -webkit-tap-highlight-color:transparent;
+}
+.svc-toggle svg{
+  width:12px;height:12px;stroke:var(--burg);fill:none;stroke-width:2.5;
+  transition:transform .35s ease;
+}
+.svc-toggle.open svg{transform:rotate(45deg)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="logo-mark">
+    <div class="logo-circle"><div class="logo-dot"></div></div>
+    <div class="logo-text">Cure <span>Pathology</span></div>
+  </div>
+  <a href="tel:+919798478565" class="nav-cta">Call Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- Microscope slide decoration -->
+  <div class="slide-wrap">
+    <div class="slide-ring r1"></div>
+    <div class="slide-ring r2"></div>
+    <div class="slide-ring r3"></div>
+    <div class="slide-cell sc1"></div>
+    <div class="slide-cell sc2"></div>
+    <div class="slide-cell sc3"></div>
+    <div class="slide-cell sc4"></div>
+    <div class="slide-cell sc5"></div>
+    <div class="slide-cross"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-kicker">
+      <div class="hero-kicker-pill">
+        <div class="kicker-dot"></div>
+        <span class="kicker-text">Muzaffarpur's Trusted Lab</span>
+      </div>
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="line js-words" data-words="Precision">Precision</span>
+      <span class="line"><em class="js-words" data-words="Diagnostic">Diagnostic</em></span>
+      <span class="line js-words" data-words="Excellence.">Excellence.</span>
+    </h1>
+
+    <p class="hero-sub sr">From routine blood panels to advanced pathology — accurate reports, delivered fast.</p>
+
+    <div class="hero-metrics sr sr-d1">
+      <div class="hero-metric">
+        <div class="hm-num">2000+</div>
+        <div class="hm-lbl">Tests</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hm-num">4.8★</div>
+        <div class="hm-lbl">Rating</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hm-num">14+</div>
+        <div class="hm-lbl">Years</div>
+      </div>
+      <div class="hero-metric">
+        <div class="hm-num">80%</div>
+        <div class="hm-lbl">Same Day</div>
+      </div>
+    </div>
+
+    <div class="hero-actions sr sr-d2">
+      <a href="tel:+919798478565" class="btn-burg">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        Call Now
+      </a>
+      <a href="#booking" class="btn-outline-burg">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Book a Test
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq">
+  <div class="mq-track">
+    <span class="mq-item"><span class="mq-dot"></span>Blood Tests</span>
+    <span class="mq-item"><span class="mq-dot"></span>Urine Analysis</span>
+    <span class="mq-item"><span class="mq-dot"></span>ECG</span>
+    <span class="mq-item"><span class="mq-dot"></span>Ultrasound</span>
+    <span class="mq-item"><span class="mq-dot"></span>Full Body Checkup</span>
+    <span class="mq-item"><span class="mq-dot"></span>Histopathology</span>
+    <span class="mq-item"><span class="mq-dot"></span>Thyroid Profile</span>
+    <span class="mq-item"><span class="mq-dot"></span>Home Collection</span>
+    <span class="mq-item"><span class="mq-dot"></span>Blood Tests</span>
+    <span class="mq-item"><span class="mq-dot"></span>Urine Analysis</span>
+    <span class="mq-item"><span class="mq-dot"></span>ECG</span>
+    <span class="mq-item"><span class="mq-dot"></span>Ultrasound</span>
+    <span class="mq-item"><span class="mq-dot"></span>Full Body Checkup</span>
+    <span class="mq-item"><span class="mq-dot"></span>Histopathology</span>
+    <span class="mq-item"><span class="mq-dot"></span>Thyroid Profile</span>
+    <span class="mq-item"><span class="mq-dot"></span>Home Collection</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec services-bg" id="services">
+  <div class="sec-inner">
+    <div class="sec-kicker sr"><div class="sk-line"></div><span class="sk-text">What We Offer</span></div>
+    <h2 class="sec-h2 sr">Every Test You Need, <em>One Place</em></h2>
+    <p class="sec-p sr">State-of-the-art diagnostics with NABL-standard quality control and certified lab professionals.</p>
+
+    <div class="services-grid sr sr-d1">
+
+      <div class="svc">
+        <div class="svc-num">01</div>
+        <div class="svc-content">
+          <div class="svc-name">Routine Blood Tests</div>
+          <div class="svc-desc">Complete blood analysis including metabolic panels, sugar levels, and advanced haematology — all with same-day precision reporting.</div>
+          <span class="svc-tag">Same Day Results</span>
+          <button class="svc-toggle" onclick="toggleList(this)">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            View Tests
+          </button>
+          <div class="test-list">
+            <span class="test-pill">CBC</span>
+            <span class="test-pill">Blood Sugar (FBS / PPBS / RBS)</span>
+            <span class="test-pill">HbA1c</span>
+            <span class="test-pill">Liver Function Test (LFT)</span>
+            <span class="test-pill">Kidney Function Test (KFT)</span>
+            <span class="test-pill">Lipid Profile</span>
+            <span class="test-pill">Thyroid Profile (T3, T4, TSH)</span>
+            <span class="test-pill">Vitamin D</span>
+            <span class="test-pill">Vitamin B12</span>
+            <span class="test-pill">Iron Profile</span>
+            <span class="test-pill">Electrolytes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-num">02</div>
+        <div class="svc-content">
+          <div class="svc-name">Hormone & Fertility Tests</div>
+          <div class="svc-desc">Comprehensive hormonal assessments for thyroid, reproductive health, fertility evaluation, and pregnancy screening.</div>
+          <span class="svc-tag">Expert Analysis</span>
+          <button class="svc-toggle" onclick="toggleList(this)">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            View Tests
+          </button>
+          <div class="test-list">
+            <span class="test-pill">Hormone Tests</span>
+            <span class="test-pill">Fertility Profile</span>
+            <span class="test-pill">Pregnancy Tests (Urine &amp; Serum)</span>
+            <span class="test-pill">LH &amp; FSH</span>
+            <span class="test-pill">Testosterone</span>
+            <span class="test-pill">Prolactin</span>
+            <span class="test-pill">AMH</span>
+            <span class="test-pill">Progesterone</span>
+            <span class="test-pill">Estradiol (E2)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-num">03</div>
+        <div class="svc-content">
+          <div class="svc-name">Urine &amp; Stool Analysis</div>
+          <div class="svc-desc">Routine and microscopic analysis for kidney health, urinary tract infections, metabolic disorders, and digestive conditions.</div>
+          <span class="svc-tag">Rapid Turnaround</span>
+          <button class="svc-toggle" onclick="toggleList(this)">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            View Tests
+          </button>
+          <div class="test-list">
+            <span class="test-pill">Urine Routine &amp; Microscopy</span>
+            <span class="test-pill">Urine Culture &amp; Sensitivity</span>
+            <span class="test-pill">24-Hour Urine</span>
+            <span class="test-pill">Stool Routine</span>
+            <span class="test-pill">Stool Culture</span>
+            <span class="test-pill">Occult Blood</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-num">04</div>
+        <div class="svc-content">
+          <div class="svc-name">Serology, Immunology &amp; Biochemistry</div>
+          <div class="svc-desc">Infection markers, immune function tests, autoimmune panels, and advanced biochemical assessments.</div>
+          <span class="svc-tag">High Accuracy</span>
+          <button class="svc-toggle" onclick="toggleList(this)">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            View Tests
+          </button>
+          <div class="test-list">
+            <span class="test-pill">Serology</span>
+            <span class="test-pill">Immunology</span>
+            <span class="test-pill">Biochemistry</span>
+            <span class="test-pill">Widal Test</span>
+            <span class="test-pill">Dengue NS1 &amp; Antibodies</span>
+            <span class="test-pill">Malaria Antigen</span>
+            <span class="test-pill">HIV 1 &amp; 2</span>
+            <span class="test-pill">HBsAg</span>
+            <span class="test-pill">Anti-HCV</span>
+            <span class="test-pill">ANA Profile</span>
+            <span class="test-pill">RA Factor</span>
+            <span class="test-pill">CRP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-num">05</div>
+        <div class="svc-content">
+          <div class="svc-name">Hematology &amp; Microbiology</div>
+          <div class="svc-desc">Advanced blood cell analysis, coagulation studies, culture sensitivity, and microbiological investigations.</div>
+          <span class="svc-tag">Certified Lab</span>
+          <button class="svc-toggle" onclick="toggleList(this)">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            View Tests
+          </button>
+          <div class="test-list">
+            <span class="test-pill">Hematology</span>
+            <span class="test-pill">Microbiology</span>
+            <span class="test-pill">Blood Culture</span>
+            <span class="test-pill">Sputum Culture</span>
+            <span class="test-pill">Coagulation Profile (PT, aPTT)</span>
+            <span class="test-pill">ESR</span>
+            <span class="test-pill">Peripheral Smear</span>
+            <span class="test-pill">Bone Marrow Study</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-num">06</div>
+        <div class="svc-content">
+          <div class="svc-name">Tumor Markers</div>
+          <div class="svc-desc">Cancer screening and monitoring through advanced tumor marker blood tests, reviewed by experienced pathologists.</div>
+          <span class="svc-tag">Early Detection</span>
+          <button class="svc-toggle" onclick="toggleList(this)">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            View Tests
+          </button>
+          <div class="test-list">
+            <span class="test-pill">Tumor Markers</span>
+            <span class="test-pill">PSA (Prostate)</span>
+            <span class="test-pill">CA 125 (Ovarian)</span>
+            <span class="test-pill">CA 19-9 (Pancreas)</span>
+            <span class="test-pill">CA 15-3 (Breast)</span>
+            <span class="test-pill">CEA</span>
+            <span class="test-pill">AFP</span>
+            <span class="test-pill">Beta-HCG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-num">07</div>
+        <div class="svc-content">
+          <div class="svc-name">Histopathology &amp; Cytology</div>
+          <div class="svc-desc">Tissue, biopsy, and cell-level analysis for accurate disease diagnosis and cancer classification by specialist pathologists.</div>
+          <span class="svc-tag">Expert Review</span>
+          <button class="svc-toggle" onclick="toggleList(this)">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            View Tests
+          </button>
+          <div class="test-list">
+            <span class="test-pill">Histopathology</span>
+            <span class="test-pill">Cytology</span>
+            <span class="test-pill">Biopsy Analysis</span>
+            <span class="test-pill">FNAC</span>
+            <span class="test-pill">Pap Smear</span>
+            <span class="test-pill">Fluid Cytology</span>
+            <span class="test-pill">Frozen Section</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-num">08</div>
+        <div class="svc-content">
+          <div class="svc-name">Preventive Health Packages</div>
+          <div class="svc-desc">Comprehensive wellness packages covering 60–100+ parameters for complete health assessment in a single visit.</div>
+          <span class="svc-tag">Best Value</span>
+          <button class="svc-toggle" onclick="toggleList(this)">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            View Tests
+          </button>
+          <div class="test-list">
+            <span class="test-pill">Preventive Health Check-up</span>
+            <span class="test-pill">Basic Health Package</span>
+            <span class="test-pill">Full Body Check-up</span>
+            <span class="test-pill">Senior Citizen Package</span>
+            <span class="test-pill">Women's Wellness Package</span>
+            <span class="test-pill">Diabetes Care Package</span>
+            <span class="test-pill">Cardiac Risk Package</span>
+            <span class="test-pill">Thyroid &amp; Hormonal Package</span>
+            <span class="test-pill">Pre-marital Package</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-num">09</div>
+        <div class="svc-content">
+          <div class="svc-name">Home Sample Collection</div>
+          <div class="svc-desc">Certified collectors at your doorstep at your preferred time. Reports delivered on WhatsApp within hours.</div>
+          <span class="svc-tag">At Your Door</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- HEALTH PACKAGES -->
+<section class="sec plans-bg" id="packages">
+  <div class="sec-inner">
+    <div class="sec-kicker sr"><div class="sk-line"></div><span class="sk-text">Health Packages</span></div>
+    <h2 class="sec-h2 sr">Choose Your <em>Health Package</em></h2>
+    <p class="sec-p sr">In association with PathCare Diagnostics — comprehensive, affordable health checkup packages with free home collection and digital reports.</p>
+
+    <div class="plans-grid">
+
+      <!-- SUPREME -->
+      <div class="plan-card supreme sr sr-d1">
+        <div class="plan-badge"><div class="plan-badge-dot"></div>Essential</div>
+        <div class="plan-name">Path Check Supreme</div>
+        <div class="plan-tagline">A complete essential health checkup covering all key blood parameters</div>
+        <div class="plan-divider"></div>
+        <div class="plan-tests-label">Includes Tests</div>
+        <div class="plan-tests">
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>CBC (Complete Blood Count)</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Liver Function Test (LFT)</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Kidney Function Test (KFT)</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Lipid Profile</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Thyroid Profile</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Iron Studies</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>HbA1c</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>ESR</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Blood Sugar</div>
+        </div>
+        <button class="plan-cta" onclick="selectAndBook('Path Check Supreme Package')">
+          Book This Package →
+        </button>
+      </div>
+
+      <!-- ULTIMA -->
+      <div class="plan-card ultima sr sr-d2">
+        <div class="plan-badge"><div class="plan-badge-dot"></div>Advanced</div>
+        <div class="plan-name">Path Check Ultima</div>
+        <div class="plan-tagline">Advanced full-body screening with vitamins and extended blood markers</div>
+        <div class="plan-divider"></div>
+        <div class="plan-tests-label">Includes Tests</div>
+        <div class="plan-tests">
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>CBC (Complete Blood Count)</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Liver Function Test (LFT)</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Kidney Function Test (KFT)</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Lipid Profile</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Thyroid Test</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Iron Studies</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>HbA1c</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>ESR</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Blood Sugar</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Vitamin B12</div>
+          <div class="plan-test-item"><div class="plan-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Vitamin D</div>
+        </div>
+        <button class="plan-cta" onclick="selectAndBook('Path Check Ultima Package')">
+          Book This Package →
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Benefits strip -->
+    <div class="sr sr-d2" style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center">
+      <div style="display:flex;align-items:center;gap:.5rem;background:white;border:1px solid var(--border);padding:.6rem 1rem;border-radius:100px">
+        <span style="font-size:1rem">🏠</span>
+        <span style="font-size:.75rem;font-weight:600;color:var(--burg3)">Free Home Collection</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;background:white;border:1px solid var(--border);padding:.6rem 1rem;border-radius:100px">
+        <span style="font-size:1rem">📱</span>
+        <span style="font-size:.75rem;font-weight:600;color:var(--burg3)">Digital Report on WhatsApp</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:.5rem;background:white;border:1px solid var(--border);padding:.6rem 1rem;border-radius:100px">
+        <span style="font-size:1rem">⚡</span>
+        <span style="font-size:.75rem;font-weight:600;color:var(--burg3)">Accurate & Fast Reporting</span>
+      </div>
+    </div>
+
+    <p class="plan-assoc sr" style="margin-top:1.25rem">In association with <strong>PathCare Diagnostics™</strong> · For Quality Diagnostics</p>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="sec gallery-bg" id="gallery">
+  <div class="sec-inner">
+    <div class="sec-kicker sr"><div class="sk-line"></div><span class="sk-text">Our Facility</span></div>
+    <h2 class="sec-h2 sr">Inside <em>Cure Pathology</em></h2>
+    <p class="sec-p sr">A clean, modern, and fully-equipped laboratory — built to serve you with precision and comfort.</p>
+
+    <div class="gallery-grid sr sr-d1">
+
+      <!-- Wide top photo -->
+      <div class="gallery-item wide">
+        <img src="lab-office.jpeg" alt="Office Area" class="gallery-img">
+        <div class="gallery-label">Office Area</div>
+      </div>
+
+      <!-- 2 photos side by side -->
+      <div class="gallery-item">
+        <img src="lab-testing.jpeg" alt="Testing Area" class="gallery-img">
+        <div class="gallery-label">Testing Area</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="lab-equipment.jpeg" alt="Modern Equipment" class="gallery-img">
+        <div class="gallery-label">Modern Equipment</div>
+      </div>
+<!--  -->
+      <!-- 2 more photos
+      <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Sample Collection</span>
+        </div>
+        <div class="gallery-label">Sample Collection Room</div>
+      </div> -->
+<!--  -->
+      <!-- <div class="gallery-item">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Team / Staff</span>
+        </div>
+        <div class="gallery-label">Our Team</div>
+      </div> -->
+<!--  -->
+      <!-- Wide bottom photo
+      <div class="gallery-item wide">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Lab Exterior / Outside View</span>
+        </div>
+        <div class="gallery-label">Cure Pathology — Muzaffarpur</div>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec about-bg" id="about">
+  <div class="sec-inner">
+    <div class="sec-kicker sr"><div class="sk-line"></div><span class="sk-text">Our Story</span></div>
+    <h2 class="sec-h2 sr">A Lab Built on <em>Trust</em></h2>
+
+    <div class="about-visual sr sr-d1">
+      <!-- Animated lab tubes -->
+      <div class="lab-anim">
+        <div class="tube t1"><div class="tube-liquid"></div></div>
+        <div class="tube t2"><div class="tube-liquid"></div></div>
+        <div class="tube t3"><div class="tube-liquid"></div></div>
+        <div class="tube t4"><div class="tube-liquid"></div></div>
+        <div class="micro-circle"></div>
+      </div>
+      <div class="quote-wrap">
+        <div class="quote-text">"Every report carries the weight of someone's health decision. We treat that responsibility with absolute seriousness."</div>
+      </div>
+    </div>
+
+    <p class="sec-p sr sr-d1">Founded in Muzaffarpur's Brahmapura area, Cure Pathology has served 1,500–2,000 patients every month for over 14 years. Our mission has never changed — precise results, delivered with care, at prices everyone can afford.</p>
+
+    <div class="feat-list sr sr-d2">
+      <div class="feat-item">
+        <div class="feat-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="feat-t">NABL-standard quality practices</div><div class="feat-s">Multi-step quality control on every single test we process.</div></div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="feat-t">Certified lab technicians</div><div class="feat-s">Trained professionals handling every sample with clinical precision.</div></div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="feat-t">WhatsApp report delivery</div><div class="feat-s">Reports sent directly to your phone — no portal login, no waiting in lines.</div></div>
+      </div>
+      <div class="feat-item">
+        <div class="feat-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="feat-t">Transparent, honest pricing</div><div class="feat-s">No hidden charges. Competitive rates with seasonal health packages available.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec process-bg">
+  <div class="sec-inner">
+    <div class="sec-kicker sr"><div class="sk-line"></div><span class="sk-text">How It Works</span></div>
+    <h2 class="sec-h2 sr">From Booking to <em>Report</em></h2>
+    <p class="sec-p sr">Simple, fast, and stress-free — the way healthcare should be.</p>
+
+    <div class="steps">
+      <div class="step sr">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Book Your Test</div>
+          <div class="step-desc">Call us, WhatsApp us, or use the form below. Tell us what you need — we'll guide you from there.</div>
+          <span class="step-tag">Under 2 minutes</span>
+        </div>
+      </div>
+      <div class="step sr sr-d1">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Sample Collection</div>
+          <div class="step-desc">Walk in to our lab or schedule a home collection. Our certified team handles every sample with precision.</div>
+          <span class="step-tag">Walk-in or Home</span>
+        </div>
+      </div>
+      <div class="step sr sr-d2">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Lab Processing</div>
+          <div class="step-desc">Every sample undergoes multi-stage testing with calibrated equipment and technician review before reporting.</div>
+          <span class="step-tag">Quality Checked</span>
+        </div>
+      </div>
+      <div class="step sr sr-d3">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Report on WhatsApp</div>
+          <div class="step-desc">Your result arrives directly on WhatsApp — clear, complete, and ready to share with your doctor.</div>
+          <span class="step-tag">80% Same Day</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec test-bg" id="reviews">
+  <div class="sec-inner">
+    <div class="sec-kicker sr"><div class="sk-line"></div><span class="sk-text">Patient Stories</span></div>
+    <h2 class="sec-h2 sr">What They <em>Say About Us</em></h2>
+    <div class="test-cards">
+      <div class="test-card sr">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"Reports were ready the same day. The staff was incredibly warm and professional. Without a doubt, the best pathology lab in all of Muzaffarpur."</div>
+        <div class="test-name">Rahul Singh</div>
+        <div class="test-loc">Muzaffarpur</div>
+      </div>
+      <div class="test-card sr sr-d1">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"Home collection service is a lifesaver. The collector arrived early, handled everything perfectly, and the report was on WhatsApp within hours. Incredible service."</div>
+        <div class="test-name">Priya Kumari</div>
+        <div class="test-loc">Brahmapura</div>
+      </div>
+      <div class="test-card sr sr-d2">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"Very clean, very professional, and the prices are genuinely fair. My entire family uses Cure Pathology for all tests. Never going anywhere else."</div>
+        <div class="test-name">Amit Tiwari</div>
+        <div class="test-loc">Muzaffarpur</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="sec-inner sr">
+    <h2 class="cta-h">Ready for Your <em>Results?</em></h2>
+    <p class="cta-p">Book today and experience diagnostics the way they should be — precise, fast, and personal.</p>
+    <div class="cta-actions">
+      <a href="tel:+919798478565" class="btn-cream">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        Call +91 9798478565
+      </a>
+      <a href="https://wa.me/919798478565" target="_blank" class="btn-ghost-cream">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact-bg" id="contact">
+  <div class="sec-inner">
+    <div class="sec-kicker sr"><div class="sk-line"></div><span class="sk-text">Find Us</span></div>
+    <h2 class="sec-h2 sr">Visit Our <em>Laboratory</em></h2>
+
+    <div class="contact-cards sr sr-d1">
+      <div class="con-row">
+        <div class="con-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div>
+          <div class="con-lbl">Address</div>
+          <div class="con-val">Juran Chapra Rd No. 3, Near SBI Bank<br>Brahmapura, Muzaffarpur – 842001</div>
+        </div>
+      </div>
+      <div class="con-row">
+        <div class="con-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div>
+        <div>
+          <div class="con-lbl">Phone</div>
+          <div class="con-val"><a href="tel:+919798478565">+91 97984 78565</a></div>
+        </div>
+      </div>
+      <div class="con-row">
+        <div class="con-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div>
+          <div class="con-lbl">Email</div>
+          <div class="con-val"><a href="mailto:tilal.zm@gmail.com">tilal.zm@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="con-row">
+        <div class="con-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div>
+          <div class="con-lbl">Hours</div>
+          <div class="con-val">Mon–Sat: 8:00 AM – 8:00 PM<br>Sunday: 8:00 AM – 2:00 PM</div>
+        </div>
+      </div>
+      <div class="con-row">
+        <div class="con-ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+        <div>
+          <div class="con-lbl">Directions</div>
+          <div class="con-val"><a href="https://maps.app.goo.gl/hWN2VwyUFh9haksf8" target="_blank">Open in Google Maps →</a></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- GOOGLE MAP EMBED -->
+    <div class="map-wrap sr sr-d1">
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.1!2d85.3745278!3d26.1290315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed10c1c4285997%3A0xf47e337048452bc3!2sCure%20Pathology!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Cure Pathology Location">
+        </iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/hWN2VwyUFh9haksf8" target="_blank" class="map-directions-btn">
+        📍 Get Directions to Cure Pathology →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK APPOINTMENT -->
+<section class="sec" id="booking" style="background:var(--cream)">
+  <div class="sec-inner">
+    <div class="sec-kicker sr"><div class="sk-line"></div><span class="sk-text">Book Now</span></div>
+    <h2 class="sec-h2 sr">Book Your <em>Test Now</em></h2>
+    <p class="sec-p sr">Fill in the details below and we will reach out to confirm your booking on WhatsApp within minutes.</p>
+    <div class="form-card sr sr-d1" style="margin-top:2rem">
+      <h3>Your Details</h3>
+      <div class="f-row">
+        <label>Your Name</label>
+        <input type="text" id="f-name" placeholder="e.g. Rahul Kumar">
+      </div>
+      <div class="f-row">
+        <label>Phone Number</label>
+        <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX">
+      </div>
+    <div class="f-row">
+  <label for="f-test">Test Required</label>
+  <!-- select की जगह input और list एट्रिब्यूट का यूज करें -->
+  <input type="text" id="f-test" list="test-options" placeholder="Type to search a test...">
+  
+  <!-- datalist के अंदर आपके सारे ऑप्शंस आ जाएंगे -->
+  <datalist id="test-options">
+    <option value="Routine Blood Test"></option>
+    <option value="CBC"></option>
+    <option value="Blood Sugar Test"></option>
+    <option value="HbA1c"></option>
+    <option value="Liver Function Test"></option>
+    <option value="Kidney Function Test"></option>
+    <option value="Lipid Profile"></option>
+    <option value="Thyroid Profile"></option>
+    <option value="Vitamin D"></option>
+    <option value="Vitamin B12"></option>
+    <option value="Iron Profile"></option>
+    <option value="Electrolytes"></option>
+    <option value="Hormone Tests"></option>
+    <option value="Fertility Profile"></option>
+    <option value="Pregnancy Tests"></option>
+    <option value="Tumor Markers"></option>
+    <option value="Urine & Stool Analysis"></option>
+    <option value="Serology"></option>
+    <option value="Immunology"></option>
+    <option value="Biochemistry"></option>
+    <option value="Hematology"></option>
+    <option value="Microbiology"></option>
+    <option value="Histopathology"></option>
+    <option value="Cytology"></option>
+    <option value="Path Check Supreme Package"></option>
+    <option value="Path Check Ultima Package"></option>
+    <option value="Other"></option>
+  </datalist>
+    </div>
+       <div class="f-row">
+        <label>Address / Area <span style="color:var(--burg);font-size:.65rem">*</span></label>
+        <input type="text" id="f-address" placeholder="e.g. Brahmapura, Muzaffarpur">
+    </div>
+      <div class="f-row">
+        <label>Message (Optional)</label>
+        <textarea id="f-msg" placeholder="Any specific concerns or requirements..."></textarea>
+      </div>
+        </div>
+      <!-- Error message box -->
+      <div id="f-error" style="display:none;background:rgba(123,31,58,.08);border:1px solid rgba(123,31,58,.25);border-radius:10px;padding:.75rem 1rem;margin-bottom:1rem;font-size:.82rem;color:var(--burg);font-weight:500"></div>
+      <button class="f-submit" id="f-btn">Send on WhatsApp →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Cure <span>Pathology</span></div>
+  <div class="footer-sub">Muzaffarpur · Bihar · Est. 2011</div>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Visit Us</a><a href="#booking">Book Test</a>
+  </div>
+  <div class="footer-copy">© 2026 Cure Pathology · Designed by Mango Web Design & Studio</div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919798478565" target="_blank" class="wa">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.570-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+
+// ── PACKAGE → BOOK FORM PRE-SELECT
+function selectAndBook(packageName){
+  const select = document.getElementById('f-test');
+  if(select){
+    for(let i=0;i<select.options.length;i++){
+      if(select.options[i].value === packageName){
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  }
+  const booking = document.getElementById('booking');
+  if(booking){
+    booking.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+
+// ── SCROLL TO TOP ON REFRESH
+if(history.scrollRestoration) history.scrollRestoration="manual";
+window.scrollTo(0,0);
+
+// ── NAV SCROLL
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);
+},{passive:true});
+
+// ── SCROLL REVEAL (.sr elements)
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.sr').forEach(el=>io.observe(el));
+
+// ── WORD-BY-WORD HERO REVEAL on load
+function revealWords(){
+  document.querySelectorAll('.js-words').forEach((el,i)=>{
+    const text=el.textContent.trim();
+    el.innerHTML='';
+    text.split(' ').forEach((word,j)=>{
+      const span=document.createElement('span');
+      span.className='word-up';
+      span.textContent=(j>0?' ':'')+word;
+      span.style.transitionDelay=`${(i*3+j)*0.12+0.3}s`;
+      el.appendChild(span);
+      setTimeout(()=>span.classList.add('in'),(i*3+j)*120+300);
+    });
+  });
+}
+revealWords();
+
+
+// ── SERVICE CARD TEST LIST TOGGLE
+function toggleList(btn){
+  const list = btn.nextElementSibling;
+  const isOpen = list.classList.contains('open');
+  list.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+  btn.querySelector('span') && (btn.querySelector('span').textContent = isOpen ? 'View Tests' : 'Hide Tests');
+  // Update text node (button has svg + text node)
+  btn.childNodes.forEach(n => {
+    if(n.nodeType === 3) n.textContent = isOpen ? ' View Tests' : ' Hide Tests';
+  });
+}
+
+// ── FORM WHATSAPP SUBMIT
+document.getElementById('f-btn').addEventListener('click',function(){
+  const name    = document.getElementById('f-name').value.trim();
+  const phone   = document.getElementById('f-phone').value.trim();
+  const test    = document.getElementById('f-test').value;
+  const address = document.getElementById('f-address').value.trim();
+  const msg     = document.getElementById('f-msg').value.trim();
+  const errBox  = document.getElementById('f-error');
+ 
+  // ── VALIDATION
+  const phoneClean = phone.replace(/[\s\-\(\)\+]/g,'');
+  const phoneValid = /^[6-9]\d{9}$/.test(phoneClean) || /^(\+91|91)?[6-9]\d{9}$/.test(phone.replace(/\s/g,''));
+ 
+  let error = '';
+  if(!name)              error = '⚠️  Please enter your name.';
+  else if(!phone)        error = '⚠️  Please enter your phone number.';
+  else if(!phoneValid)   error = '⚠️  Please enter a valid phone number.';
+  else if(!test)         error = '⚠️  Please select the test or service you need.';
+  else if(!address)      error = '⚠️  Please enter your address or area.';
+ 
+  if(error){
+    errBox.textContent = error;
+    errBox.style.display = 'block';
+    errBox.scrollIntoView({behavior:'smooth', block:'nearest'});
+    return;
+  }
+ 
+  errBox.style.display = 'none';
+ 
+  const text = `Hello Cure Pathology,%0AI would like to book a test.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0ATest: ${encodeURIComponent(test)}%0AAddress: ${encodeURIComponent(address)}${msg ? '%0ANote: '+encodeURIComponent(msg) : ''}`;
+  window.open(`https://wa.me/919798478565?text=${text}`,'_blank');
+});
+ 
+// Clear error on input
+['f-name','f-phone','f-test','f-address'].forEach(id=>{
+  const el = document.getElementById(id);
+  if(el) el.addEventListener('input',()=>{
+    document.getElementById('f-error').style.display='none';
+  });
+});
+ 
+// ── Touch-friendly hover state for service cards
+document.querySelectorAll('.svc,.feat-item,.con-row').forEach(el=>{
+  el.addEventListener('touchstart',()=>el.classList.add('touched'),{passive:true});
+  el.addEventListener('touchend',()=>setTimeout(()=>el.classList.remove('touched'),300),{passive:true});
+});
+</script>
+</body>
+</html>
+ 
