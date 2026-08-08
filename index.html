@@ -2089,18 +2089,16 @@ footer{
 
 // ── PACKAGE → BOOK FORM PRE-SELECT
 function selectAndBook(packageName){
-  const select = document.getElementById('f-test');
-  if(select){
-    for(let i=0;i<select.options.length;i++){
-      if(select.options[i].value === packageName){
-        select.selectedIndex = i;
-        break;
-      }
-    }
-  }
+  // Set the input value directly (datalist input)
+  const input = document.getElementById('f-test');
+  if(input) input.value = packageName;
+
+  // Scroll to booking section
   const booking = document.getElementById('booking');
   if(booking){
-    booking.scrollIntoView({behavior:'smooth', block:'start'});
+    setTimeout(()=>{
+      booking.scrollIntoView({behavior:'smooth', block:'start'});
+    }, 100);
   }
 }
 
